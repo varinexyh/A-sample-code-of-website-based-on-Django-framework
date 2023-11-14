@@ -6,4 +6,4 @@ A simple webpage sample based on Django and written by Python.
 1.The [Django](https://www.djangoproject.com/download/) framework based on Python(version 4.2.7).<br>
 2.Remember to check whether those modules is included in your Python environment: requests, os, urllib3.<br>
 ## How to run the server in your locolhost port
-Step 1: Plz copy the code from this respo
+Step 1: Plz copy the code from this repository 
