@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with GPT</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'chatapp/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Chat with GPT</h1>
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Say something...">
+            <button onclick="sendRequest()">Send</button>
+        </div>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        function sendRequest(){
+            var userInput = document.getElementById('userInput').value;
+            fetch(`/get-response/?user_input=${userInput}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').innerText = data.gpt_response;
+            });
+        }
+    </script>
+</body>
+</html>
